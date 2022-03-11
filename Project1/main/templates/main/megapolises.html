@@ -1,0 +1,53 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+{% block title %}
+Megapolises
+{% endblock %}
+
+{% block body %}
+<div class="cont">
+
+    <div>
+        {% for j in city %}
+        <div class="cit">
+            <h3>{{ j.city }}</h3>
+            <h5>{{ j.population }}</h5>
+            <h5>{{ j.area }}</h5>
+            <p>{{ j.place }}</p>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="pict">
+        <img src="{% static 'Astana.jpg' %}">
+        <img src="{% static 'Almaty.jpg' %}">
+        <img src="{% static 'Shymkent.jpg' %}">
+    </div>
+
+</div>
+
+<style>
+    .cont {
+        display: flex;
+        margin: 40px;
+        margin-left: 70px;
+        margin-right: 30px;
+    }
+    .pict {
+        margin-left: 100px;
+        width: 1500px;
+    }
+    .pict img {
+        width: 450px;
+        height: 240px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+    .cit {
+        margin-top: 70px;
+    }
+</style>
+{% endblock %}

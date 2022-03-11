@@ -1,0 +1,62 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+Nature
+{% endblock %}
+
+{% block body %}
+<div class="title">
+    <div><h1>Nature Of Kazakhstan</h1></div>
+</div>
+
+<div class="alb">
+    <div class="r">
+        <div>
+            <img src="{% static '1.jpg' %}">
+        </div>
+        <div>
+            <img src="{% static '2.jpg' %}">
+        </div>
+        <div>
+            <img src="{% static '3.jpg' %}">
+        </div>
+        <div>
+            <img src="{% static '4.jpg' %}">
+        </div>
+    </div>
+
+    <div class="r">
+        <div>
+            <img src="{% static '5.jpg' %}">
+        </div>
+        <div>
+            <img src="{% static '6.jpg' %}">
+        </div>
+        <div>
+            <img src="{% static '7.jpg' %}">
+        </div>
+        <div>
+            <img src="{% static '8.jpg' %}">
+        </div>
+    </div>
+</div>
+<style>
+    .title {
+        margin-top: 70px;
+        margin-left: 35%;
+    }
+    .alb {
+        margin-top: 30px;
+    }
+    .r {
+        width: 250px;
+        margin: 5px;
+        display: flex;
+    }
+    .r img {
+        width: 350px;
+        height: 230px;
+        margin: 6px;
+    }
+</style>
+{% endblock %}

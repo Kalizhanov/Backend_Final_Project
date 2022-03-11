@@ -1,0 +1,79 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+{% block title %}
+Kazakh Traditions
+{% endblock %}
+
+
+{% block body %}
+<div class="title">
+    <div><h1>Kazakh Traditions</h1></div>
+</div>
+
+<div class="alb">
+    <div class="r">
+        <div>
+            <img src="{% static 'tr1.jpg' %}">
+        </div>
+        <div>
+            <img src="{% static 'tr2.jpg' %}">
+        </div>
+        <div>
+            <img src="{% static 'tr3.jpg' %}">
+        </div>
+        <div>
+            <img src="{% static 'tr4.jpg' %}">
+        </div>
+    </div>
+
+    <div class="tr">
+        {% for k in trad %}
+        <div>
+            <h2>{{ k.tradition }}</h2>
+            <p>{{ k.descr }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="r">
+        <div>
+            <img src="{% static 'tr5.jpg' %}">
+        </div>
+        <div>
+            <img src="{% static 'tr6.jpg' %}">
+        </div>
+        <div>
+            <img src="{% static 'tr7.jpg' %}">
+        </div>
+        <div>
+            <img src="{% static 'tr8.jpg' %}">
+        </div>
+    </div>
+</div>
+<style>
+    body {
+        background-color: rgb(221, 223, 223);
+    }
+    .title {
+        margin-top: 70px;
+        margin-left: 35%;
+    }
+    .alb {
+        margin-top: 30px;
+    }
+    .r {
+        width: 250px;
+        margin: 5px;
+        display: flex;
+    }
+    .r img {
+        width: 350px;
+        height: 230px;
+        margin: 6px;
+    }
+    .tr {
+        margin: 40px;
+    }
+</style>
+{% endblock %}

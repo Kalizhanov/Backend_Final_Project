@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+History of Kazakhstan
+{% endblock %}
+
+{% block body %}
+
+<div class="pict">
+    <img src="{% static 'his.jpeg' %}">
+</div>
+
+<div class="cont">
+{% for i in histr %}
+    <div class="alert alert-warning">
+        <h3>{{ i.years }}</h3>
+        <p>{{ i.hap }}</p>
+    </div> 
+{% endfor %}
+</div>
+
+<style>
+    .cont {
+        display: flex;
+        margin: 50px;
+    }
+    .pict {
+        margin: 50px;
+    }
+    .pict img {
+        width: 100%;
+    }
+</style>
+
+{% endblock %}
