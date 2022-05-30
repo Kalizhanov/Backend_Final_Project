@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% load main_extras %}
+
+{% block title %}
+Presidents
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    {% getp as post %}
+    {% for i in post %}
+    <div>
+        <img src="{{ i.image }}" alt="">
+      <h2>{{ i.name }}</h2>
+      <h4>{{ i.year }}</h4>
+      <h4>{{ i.describe }}</h4>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

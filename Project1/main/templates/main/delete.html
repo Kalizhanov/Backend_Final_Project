@@ -1,0 +1,33 @@
+{% extends 'main/base.html'%}
+
+{% block title %}
+Deleting the Data
+{% endblock %}
+
+{% block body %}
+
+<div class="cont">
+    <div>
+        <p>Are you sure you want to delete tradition "{{ item }}"?</p>
+    </div>
+
+    <form action="{% url 'delete' item.id %}" method="POST">
+        {% csrf_token %}
+        <a href="{% url 'trad' %}">Cancel</a>
+        <input type="submit" name="Confirm" value="Delete">
+    </form>
+</div>
+
+<style>
+    .cont {
+        margin-top: 31px;
+        border-color: red;
+        border-width: 3px;
+        border-style: solid;
+        padding-top: 85px;
+        padding-left: 75px;
+        width: 500px;
+        height: 250px;
+    }
+</style>
+{% endblock %}

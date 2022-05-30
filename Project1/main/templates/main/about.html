@@ -1,102 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My CV</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Creators</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'Styles.css' %}"/>
 </head>
 <body>
-    <div class="container">
-        <div class="info">
-            <a href="{% url 'home' %}">
-                <img src="{% static 'IMG_2622.jpg' %}" alt="Photo of me" class="photo">
-            </a>
-            <div class="infot">
-                <h1>Galymzhan Kalizhanov</h1>
-                <p><em>I'm <strong>SDUdent!</strong> </em></p>
-                <p><em>I like travelling, playing volleyball and just chilling</em> </p>
-
-                <h4><em>My Social Medias</em></h4>
-                <a href="https://vk.com/galymzhan1" target="_blank">VK</a>
-                |
-                <a href="https://www.instagram.com/__kalizhanov/" target="_blank">Instagram</a>
-                |
-                <a href="https://t.me/kalizhanov_7sk" target="_blank">Telegram</a>
-            </div>
-
-        </div> 
-
-        <div class="card bg-yellow">
-            <h2>My Hobbies</h2>
-            <ol class="list">
-                <li>Playing volleyball</li>
-                <li>Reading books</li>
-                <li>Watching movies, serials, <a target="_blank" href="https://www.notion.so/Anime-List-597a8a8d78e2414eab1b7fce1f0003c8"><em>animes</em></a></li>
-            </ol>
+    <span class="ourP">
+        <div class="pict">
+            <a href="{% url 'aboutG' %}"><img src="{% static 'IMG_2622.jpg' %}"></a>
+            <div class="title">Kalizhanov Galymzhan</div>
         </div>
-
-        <div class="card bg-green">
-            <h2>My Education</h2>
-            <table cellspacing="10" class="table">
-                <tr>
-                    <td>School #20</td>
-                    <td>0s grade</td>
-                    <td>2008-2009</td>
-                </tr>
-                <tr>
-                    <td>School #42</td>
-                    <td>1st-4th grades</td>
-                    <td>2009-2013</td>
-                </tr>
-                <tr>
-                    <td>School #23</td>
-                    <td>5th-11th grades</td>
-                    <td>2013-2020</td>
-                </tr>
-                <tr>
-                    <td>Suleyman Demirel University</td>
-                    <td>1st-4th courses</td>
-                    <td>2020-2024</td>
-                </tr>
-            </table>
+        <div class="pict">
+            <a href="{% url 'aboutA' %}"><img src="{% static 'PhotoAli.jpg' %}"></a>
+            <div class="title">Baijuman Ali</div>
         </div>
-
-
-        <div class="contact">
-        <h2>Contact me</h2>
-        <form>
-            <div class="row1">
-                <div class="form">
-                    <label for="name">Your name:</label>
-                    <input type="text" id="name" placeholder="Your name...">
-                </div>
-                <div class="form">
-                    <label for="surname">Your surname:</label>
-                    <input type="text" id="surname" placeholder="Your surname...">
-                </div>
-            </div>
-
-            <div class="row2">
-                <div class="form">
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" placeholder="Your email...">
-                </div>
-                
-                <div class="form">
-                    <label for="number">Your number:</label>
-                    <input type="number" id="number" placeholder="Your number...">
-                </div>
-            </div>
-
-            <div class="form">
-                <label for="text">Your message:</label>
-                <textarea id="text" cols="15" rows="3" placeholder="Write the message here..."></textarea>
-            </div>
-
-            <input class="btn" type="submit" value="Submit">
-        </form>
+        <div class="pict">
+            <a href="{% url 'aboutY' %}"><img src="{% static 'PhotoYerke.jpg' %}"></a>
+            <div class="title">Lepessov Daulet</div>
         </div>
-    </div>
+    </span>
+
+    <style>
+        body {
+            background: darkslateblue;
+	        height: 100vh;
+	        display: flex;
+	        justify-content: center;
+	        align-items: center;
+        }
+        .ourP {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .pict {
+            margin: 150px;
+        }
+
+        .pict img {
+            width: 250px;
+            height: 300px;
+	        box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+	        margin-bottom: 1rem;
+        }
+
+        .pict:hover img {
+            filter: saturate(300%);
+        }
+
+        .title {
+            font-family: "Dancing Script", cursive;
+            font-size: 25px;
+            color: whitesmoke;
+            position: relative;
+        }
+
+        .title::after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 4px;
+            background-color: whitesmoke;
+            left: 50%;
+            bottom: -10px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .pict:hover .title::after {
+            width: 100%;
+            left: 0;
+        }
+        
+    </style>
 </body>
 </html>

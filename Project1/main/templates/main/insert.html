@@ -1,0 +1,28 @@
+{% extends 'main/base.html'%}
+
+{% block title %}
+Creating new Data 
+{% endblock %}
+
+{% block body %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div>
+        <h4>Tradition</h4> 
+        {{ form.tradition }}
+    </div>
+    <div>
+        <h4>Describe of the Tradition</h4> 
+        {{ form.descr }}
+    </div>
+    <input type="submit" name="Submit">
+</form>
+
+<style>
+    form {
+        margin-left: 35%;
+        margin-top: 15%;
+    }
+</style>
+{% endblock %}

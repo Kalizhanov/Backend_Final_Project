@@ -27,12 +27,17 @@
               <li class="nav-item">
                   <a class="nav-link" href="{% url 'megap' %}">Megapolises</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'pres' %}">Presidents</a>
+            </li>
             </ul>
-            <a class="nav-link" href="{% url 'about' %}">About Me</a>
+            <a class="nav-link" href="{% url 'reg' %}">Registration</a>
+            <a class="nav-link" href="{% url 'about-us' %}">About Us</a>
           </div>
         </div>
       </nav>
     </div>
+    
     <span class="container">
       {% block body %}{% endblock %}
     </span>

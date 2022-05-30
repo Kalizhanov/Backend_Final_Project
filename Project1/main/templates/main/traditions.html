@@ -8,7 +8,12 @@ Kazakh Traditions
 
 {% block body %}
 <div class="title">
-    <div><h1>Kazakh Traditions</h1></div>
+    <div>
+        <h1>Kazakh Traditions</h1>
+    </div>
+    <div>
+        <a class="buttonLink" href="{% url 'insert' %}"><button>Insert</button></a>
+    </div>
 </div>
 
 <div class="alb">
@@ -32,7 +37,13 @@ Kazakh Traditions
         <div>
             <h2>{{ k.tradition }}</h2>
             <p>{{ k.descr }}</p>
+            <div class="buttons">
+                <a class="updLink" href="{% url 'update' k.id %}"><button class="updBtn">UPDATE</button></a>
+                <a class="dltLink" href="{% url 'delete' k.id %}"><button class="dltBtn">DELETE</button></a>
+                <a class="detBtn" href="{% url 'details' k.slug %}">DETAILS</a>
+            </div>
         </div>
+        <hr>
         {% endfor %}
     </div>
 
@@ -55,9 +66,27 @@ Kazakh Traditions
     body {
         background-color: rgb(221, 223, 223);
     }
+    a {
+        text-decoration: none;
+        color: black;
+        padding-left: 13px;
+    }
     .title {
         margin-top: 70px;
         margin-left: 35%;
+        display: flex;
+        
+    }
+    .title button {
+        width: 100px;
+        margin-top: 10px;
+        margin-left: 20px;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .buttonLink:hover button {
+        background-color: black;
+        color: aliceblue;
     }
     .alb {
         margin-top: 30px;
@@ -74,6 +103,26 @@ Kazakh Traditions
     }
     .tr {
         margin: 40px;
+    }
+    .updBtn {
+        background-color: rgb(17, 219, 17);
+        width: 100px;
+        border-radius: 5px;
+    }
+    .detBtn {
+        background-color: rgb(229, 233, 25);
+        width: 100px;
+        border-radius: 5px;
+        margin-left: 20px;
+    }
+    .dltBtn {
+        background-color: red;
+        width: 100px;
+        border-radius: 5px;
+        margin-left: 20px;
+    }
+    .buttons {
+        display: flex;
     }
 </style>
 {% endblock %}

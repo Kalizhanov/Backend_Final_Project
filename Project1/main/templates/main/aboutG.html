@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Galymzhan's CV</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Styles.css' %}"/>
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'IMG_2622.jpg' %}" alt="Photo of me" class="photo">
+            </a>
+            <div class="infot">
+                <h1>Galymzhan Kalizhanov</h1>
+                <p><em>I'm <strong>SDUdent!</strong> </em></p>
+                <p><em>I like travelling, playing volleyball and just chilling</em> </p>
+
+                <h4><em>My Social Medias</em></h4>
+                <a href="https://vk.com/galymzhan1" target="_blank">VK</a>
+                |
+                <a href="https://www.instagram.com/__kalizhanov/" target="_blank">Instagram</a>
+                |
+                <a href="https://t.me/kalizhanov_7sk" target="_blank">Telegram</a>
+            </div>
+
+        </div> 
+
+        <div class="card bg-yellow">
+            <h2>My Hobbies</h2>
+            <ol class="list">
+                <li>Playing volleyball</li>
+                <li>Reading books</li>
+                <li>Watching movies, serials, <a target="_blank" href="https://www.notion.so/Anime-List-597a8a8d78e2414eab1b7fce1f0003c8"><em>animes</em></a></li>
+            </ol>
+        </div>
+
+        <div class="card bg-green">
+            <h2>My Education</h2>
+            <table cellspacing="10" class="table">
+                <tr>
+                    <td>School #20</td>
+                    <td>0s grade</td>
+                    <td>2008-2009</td>
+                </tr>
+                <tr>
+                    <td>School #42</td>
+                    <td>1st-4th grades</td>
+                    <td>2009-2013</td>
+                </tr>
+                <tr>
+                    <td>School #23</td>
+                    <td>5th-11th grades</td>
+                    <td>2013-2020</td>
+                </tr>
+                <tr>
+                    <td>Suleyman Demirel University</td>
+                    <td>1st-4th courses</td>
+                    <td>2020-2024</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

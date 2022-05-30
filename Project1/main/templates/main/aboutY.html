@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Daulet's CV</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Styles.css' %}"/>
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'PhotoYerke.jpg' %}" alt="Photo of me" class="photo">
+            </a>
+            <div class="infot">
+                <h1>Daulet Lepessov</h1>
+                <p><em>I'm <strong>SDUdent!</strong> </em></p>
+                <p><em>I like listening music, playing chess and basketball</em> </p>
+
+                <h4><em>My Social Medias</em></h4>
+                <a href="https://www.instagram.com/__sayin_yereke/" target="_blank">Instagram</a>
+                |
+                <a href="https://t.me/sayin_yereke" target="_blank">Telegram</a>
+            </div>
+
+        </div> 
+
+        <div class="card bg-yellow">
+            <h2>My Hobbies</h2>
+            <ol class="list">
+                <li>Playing basketball</li>
+                <li>Listening music</li>
+                <li>Watching kazakh serials</li>
+            </ol>
+        </div>
+
+        <div class="card bg-green">
+            <h2>My Education</h2>
+            <table cellspacing="10" class="table">
+                <tr>
+                    <td>School B.Kenzhebaev</td>
+                    <td>1th-11th grades</td>
+                    <td>2013-2020</td>
+                </tr>
+                <tr>
+                    <td>Suleyman Demirel University</td>
+                    <td>1st-4th courses</td>
+                    <td>2020-2024</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
